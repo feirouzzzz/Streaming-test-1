@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Login from './Pages/Auth/Login';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'//dockerpackage that turns react from single page application
+// into multipile page application
+
+import Signup from './Pages/Auth/Signup';
+import Home from './Pages/AfterAuth/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-black text-white">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/Home" element={<Home />}/>
+        </Routes>
+      </BrowserRouter>
+      
     </div>
   );
 }
-
 export default App;
+ 
