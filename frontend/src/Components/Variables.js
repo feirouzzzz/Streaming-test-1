@@ -1,0 +1,1 @@
+export const LogoPath = "../images/logo.png"
